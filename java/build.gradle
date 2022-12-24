@@ -9,6 +9,11 @@ repositories {
     mavenCentral()
 }
 
+compileJava   {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
 dependencies {
     // Тестовый фреймворк
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
@@ -22,5 +27,8 @@ dependencies {
 }
 
 test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
     useJUnitPlatform()
 }

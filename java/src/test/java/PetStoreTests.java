@@ -9,7 +9,7 @@ public class PetStoreTests {
 
     @Test
     void test() {
-        String endpoint = "https://petstore.swagger.io/v2/pet/";
+        String uri = "https://petstore.swagger.io/v2/pet/";
         String petName = "Барсик";
 
         JSONObject bodyJO = new JSONObject()
@@ -20,7 +20,7 @@ public class PetStoreTests {
                 .when()
                 .contentType(ContentType.JSON)
                 .body(bodyJO.toString())
-                .post(endpoint)
+                .post(uri)
                 .then()
                 .statusCode(200)
                 .extract()
@@ -30,7 +30,7 @@ public class PetStoreTests {
         String actualPetName = given()
                 .when()
                 .contentType(ContentType.JSON)
-                .get(endpoint + newPetId)
+                .get(uri + newPetId)
                 .then()
                 .statusCode(200)
                 .extract()
