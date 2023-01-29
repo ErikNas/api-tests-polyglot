@@ -1,2 +1,9 @@
 rootProject.name = 'java'
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // or FAIL_ON_PROJECT_REPOS
+    repositories {
+        maven { url 'https://repository.rt.ru/repository/maven-repo1.maven.org' }
+    }
+}
+
