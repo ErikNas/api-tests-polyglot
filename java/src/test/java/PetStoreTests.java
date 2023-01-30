@@ -17,11 +17,11 @@ public class PetStoreTests {
                 .put("status", "available");
 
         String newPetId = given()
-                .when()
+                .when().log().all()
                 .contentType(ContentType.JSON)
                 .body(bodyJO.toString())
                 .post(uri)
-                .then()
+                .then().log().all()
                 .statusCode(200)
                 .extract()
                 .jsonPath()
