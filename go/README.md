@@ -1,24 +1,32 @@
 # Golang
 
-## Install
+framework: go-resty  
+OS: Fedora Linux 36
+
+## Install environment
+
+1. Download go installer from [this](https://go.dev/doc/install).
+
+2. Add /usr/local/go/bin to the PATH
+
+	```sh
+	export PATH=$PATH:/usr/local/go/bin
+	```
+
+3. Install framework go-resty
+
+	```sh
+	go get github.com/go-resty/resty/v2
+	```
+
+## Run tests
 
 ```sh
-$ export PATH=$PATH:/usr/local/go/bin
-
-$ go mod init
-
-go: creating new go.mod: module hello
-go: to add module requirements and sums:
-	go mod tidy
-
-$ go get github.com/go-resty/resty/v2
-
-go: added github.com/go-resty/resty/v2 v2.7.0
-
-$ go buld
-
-$ go run main.go
-
+go test
 ```
 
-asdasd
+## Create new empty project
+
+```sh
+go mod init
+```
