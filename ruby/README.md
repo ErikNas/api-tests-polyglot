@@ -8,7 +8,7 @@ OS: Fedora Linux 36
 Install
 
 ```sh
-sudo dnf install java-1.8.0-openjdk-devel.x86_64
+sudo dnf install 
 ```
 
 ## Run tests
