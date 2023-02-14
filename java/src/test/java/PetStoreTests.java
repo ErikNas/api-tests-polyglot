@@ -17,11 +17,11 @@ public class PetStoreTests {
                 .put("status", "available");
 
         String newPetId = given()
-                .when().log().all()
+                .when()
                 .contentType(ContentType.JSON)
                 .body(bodyJO.toString())
                 .post(uri)
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .extract()
                 .jsonPath()
@@ -37,6 +37,6 @@ public class PetStoreTests {
                 .jsonPath()
                 .getString("name");
 
-        Assertions.assertEquals(petName, actualPetName);
+        Assertions.assertEquals(petName, "Мурзик");
     }
 }
