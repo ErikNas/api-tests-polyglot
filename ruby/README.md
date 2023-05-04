@@ -9,6 +9,7 @@ Install
 
 ```sh
 sudo dnf install 
+gem install rspec
 ```
 
 ## Run tests

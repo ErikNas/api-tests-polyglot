@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class PetStoreTests {
 
     @Test
-    void test() {
+    void createNewPetTest() {
         String uri = "https://petstore.swagger.io/v2/pet/";
         String petName = "Барсик";
 

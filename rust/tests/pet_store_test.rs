@@ -1,5 +1,5 @@
 use reqwest::blocking::Client;
-use reqwest::{self, StatusCode, Response};
+use reqwest::{self, StatusCode};
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 
